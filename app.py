@@ -8,6 +8,9 @@ import random
 from datetime import datetime, timedelta
 from streamlit.components.v1 import html # Imported html for direct embedding
 
+CORRECT_USERNAME = st.secrets["USERNAME"]
+CORRECT_PASSWORD = st.secrets["PASSWORD"]
+
 # --- Function to Generate Random RASCAL Data ---
 def generate_random_rascal_data(num_zones=3):
     """Generates a DataFrame with random RASCAL-like data, localized for South Africa."""
@@ -165,8 +168,8 @@ if 'authenticated' not in st.session_state:
     st.session_state['authenticated'] = False
 
 # Hardcoded credentials for PoC
-CORRECT_USERNAME = "manager"
-CORRECT_PASSWORD = "password123"
+# CORRECT_USERNAME = "manager"
+# CORRECT_PASSWORD = "password123"
 
 # --- Custom Styling for Login Page ---
 st.markdown("""
